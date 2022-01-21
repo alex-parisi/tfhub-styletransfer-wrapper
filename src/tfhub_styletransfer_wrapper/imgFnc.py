@@ -9,8 +9,7 @@ def crop_center(image):
     new_shape = min(shape[1], shape[2])
     offset_y = max(shape[1] - shape[2], 0) // 2
     offset_x = max(shape[2] - shape[1], 0) // 2
-    image = tf.image.crop_to_bounding_box(
-        image, offset_y, offset_x, new_shape, new_shape)
+    image = tf.image.crop_to_bounding_box(image, offset_y, offset_x, new_shape, new_shape)
     return image
 
 
