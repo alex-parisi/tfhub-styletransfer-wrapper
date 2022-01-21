@@ -1,4 +1,11 @@
 # TF Hub Wrapper
+<a href="https://github.com/alex-parisi/tfhub-styletransfer-wrapper/releases/tag/v1.1.0">
+  <img alt="Latest Release" src="https://img.shields.io/github/v/release/alex-parisi/tfhub-styletransfer-wrapper">
+</a>
+<a href=#>
+  <img alt="License" src="https://img.shields.io/github/license/alex-parisi/tfhub-styletransfer-wrapper">
+</a>
+<br>
 This package contains functions to properly load and process images for input to Google's TensorFlow
 Hub v2 model for fast arbitrary image style transfer and obtain a style-transferred output image.
 
