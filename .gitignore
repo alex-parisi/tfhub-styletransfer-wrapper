@@ -1,9 +1,0 @@
-venv/
-dist/
-test/
-.git/
-.idea/
-src/tfhub_styletransfer_wrapper.egg-info
-.gitignore
-setup.cfg
-pyproject.toml
