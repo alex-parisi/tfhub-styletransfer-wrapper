@@ -9,7 +9,9 @@
 This package contains functions to properly load and process images for input to Google's TensorFlow
 Hub v2 model for fast arbitrary image style transfer and obtain a style-transferred output image.
 
-!['Example Output'](https://drive.google.com/uc?id=1QhZpl_Uw6qvejbI4ALRz8ZLALR_vAvG2)
+<a href=#>
+  <img alt="Example Output" src="https://drive.google.com/uc?id=1QhZpl_Uw6qvejbI4ALRz8ZLALR_vAvG2">
+</a>
 
 ### Usage:
 First, install the package with pip:
@@ -38,5 +40,9 @@ hub_wrapper.show_images(stylized_image)
 ```
 
 ### More examples
-!['Example Output'](https://drive.google.com/uc?id=1_QpNmSEA49sN3H3mz9ypTpS9-HMXhLSP)
-!['Example Output'](https://drive.google.com/uc?id=1XaOF502G5z1HEEGiQturTBFkZLPvBJLk)
+<a href=#>
+  <img alt="Example Output" src="https://drive.google.com/uc?id=1_QpNmSEA49sN3H3mz9ypTpS9-HMXhLSP">
+</a>
+<a href=#>
+  <img alt="Example Output" src="https://drive.google.com/uc?id=1XaOF502G5z1HEEGiQturTBFkZLPvBJLk">
+</a>
