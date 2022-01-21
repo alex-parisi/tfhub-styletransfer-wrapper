@@ -1,7 +1,7 @@
 import os
 import tensorflow as tf
 import tensorflow_hub as hub
-from imgFnc import load_image, show_images
+from tfhub_styletransfer_wrapper.imgFnc import load_image, show_images
 
 
 def evaluate_hub(content_image_filename, style_image_filename, output_size, style_size, plot_onoff=False):
@@ -22,6 +22,6 @@ def evaluate_hub(content_image_filename, style_image_filename, output_size, styl
 def load_and_preprocess(content_image_filename, style_image_filename, output_size, style_size):
     content_image = load_image(content_image_filename, (output_size, output_size))
     style_image = load_image(style_image_filename, (style_size, style_size))
-    style_image = tf.nn.avg_pool(style_image, ksize=[3, 3], strides=[1, 1], padding='same')
+    style_image = tf.nn.avg_pool(style_image, ksize=[3, 3], strides=[1, 1], padding='SAME')
 
     return content_image, style_image
