@@ -1,6 +1,10 @@
 from matplotlib import gridspec
 import matplotlib.pylab as plt
 import tensorflow as tf
+import glob
+import imageio
+import cv2
+import os
 
 
 def crop_center(image):
@@ -20,6 +24,22 @@ def load_image(image_path, image_size=(256, 256), preserve_aspect_ratio=True):
     img = crop_center(img)
     img = tf.image.resize(img, image_size, preserve_aspect_ratio=preserve_aspect_ratio)
     return img
+
+
+def save_image(img, filename):
+    img = tf.bitcast(tf.cast(img[0] * 255, dtype=tf.int8), tf.uint8)
+    img = tf.io.encode_jpeg(img)
+    filename = tf.constant(f"{filename}")
+    tf.io.write_file(filename, img)
+
+
+def save_to_gif(input_filenames, output_filename, out_size=512):
+    with imageio.get_writer(output_filename, mode='I', fps=30) as writer:
+        for filename in input_filenames:
+            img = imageio.imread(filename)
+            img = cv2.resize(img, dsize=(out_size, out_size), interpolation=cv2.INTER_CUBIC)
+            writer.append_data(img)
+            os.remove(filename)
 
 
 def show_images(images, titles=('',)):
