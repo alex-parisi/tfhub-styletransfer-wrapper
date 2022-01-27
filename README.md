@@ -20,7 +20,7 @@ pip install tfhub-styletransfer-wrapper
 ```
 Then import the package:
 ```
-import tfhub-styletransfer-wrapper
+from tfhub_styletransfer_wrapper import StyleHub
 ```
 And call the hub evaluation function:
 ```
