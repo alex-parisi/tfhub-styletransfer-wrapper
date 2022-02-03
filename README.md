@@ -1,4 +1,4 @@
-# TF Hub Wrapper
+# TF Hub Wrapper - Style Transfer
 <a href="https://github.com/alex-parisi/tfhub-styletransfer-wrapper/releases/tag/v1.1.0">
   <img alt="Latest Release" src="https://img.shields.io/github/v/release/alex-parisi/tfhub-styletransfer-wrapper">
 </a>
@@ -24,7 +24,7 @@ from tfhub_styletransfer_wrapper import StyleHub
 ```
 And call the hub evaluation function:
 ```
-stylehub = StyleHub('CPU')
+stylehub = StyleHub()
 stylehub.load_content(content_image_filename, 512)
 stylehub.load_style(style_image_filename, 256)
 stylized_image = stylehub.evaluate(True)
